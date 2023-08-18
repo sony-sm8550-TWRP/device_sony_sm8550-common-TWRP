@@ -50,6 +50,8 @@ on fs
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
 
 on boot
+    wait /sys/devices/virtual/input/lxs_ts_input/after_probe
+    write /sys/devices/virtual/input/lxs_ts_input/after_probe 1
     setprop sys.usb.config adb
     start variant-script
     start overrideprops
