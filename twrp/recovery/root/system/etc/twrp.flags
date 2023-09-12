@@ -1,6 +1,7 @@
 # mount point   fstype  device                                          device2             flags
 # Logical partitions
 /system_ext     ext4    system_ext                                                          flags=display=System_EXT
+/system_dlkm    ext4    system_dlkm                                                         flags=display=System_DLKM
 /vendor_dlkm    ext4    vendor_dlkm                                                         flags=display=Vendor_DLKM
 
 # Userdata/Metadata partitions
@@ -9,6 +10,7 @@
 # Other partitions
 /boot           emmc    /dev/block/bootdevice/by-name/boot                                  flags=slotselect
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery                              flags=slotselect;display="Recovery";backup=1;flashimg=1
+/init_boot      emmc    /dev/block/bootdevice/by-name/init_boot                             flags=slotselect;display="Init Boot";backup=1;flashimg=1
 /vendor_boot    emmc    /dev/block/bootdevice/by-name/vendor_boot                           flags=slotselect;display="Vendor Boot";backup=1;flashimg=1
 
 # AVB partitions
