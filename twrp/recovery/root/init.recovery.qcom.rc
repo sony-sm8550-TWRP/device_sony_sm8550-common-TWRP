@@ -27,12 +27,6 @@
 
 import /init.recovery.qcom_decrypt.rc
 
-service variant-script /system/bin/variant-script.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
 
 service overrideprops /system/bin/overrideprops.sh
     user root
@@ -66,5 +60,4 @@ on property:twrp.modules.loaded=true
     wait /sys/class/power_supply/battery
     start vendor.health-default
     start health-hal-2-1
-    start vendor.qti.vibrator
     umount /firmware
