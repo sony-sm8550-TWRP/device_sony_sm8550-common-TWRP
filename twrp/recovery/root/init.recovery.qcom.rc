@@ -47,7 +47,7 @@ on boot
     wait /sys/devices/virtual/input/lxs_ts_input/after_probe
     write /sys/devices/virtual/input/lxs_ts_input/after_probe 1
     setprop sys.usb.config adb
-    start variant-script
+    start vendor.vibrator.cs40l25
     start overrideprops
 
 on property:twrp.modules.loaded=true
